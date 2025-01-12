@@ -10,7 +10,7 @@ function Cards({ id, name }) {
 
     const deleteData = async (id) => {
         try {
-            await axios.delete(`http://localhost:5003/students/${id}`);
+            await axios.delete(`https://frontend2-3mm5.onrender.com/students/${id}`);
             toast.success("Data Deleted 👍")
             window.location.reload();
         }
