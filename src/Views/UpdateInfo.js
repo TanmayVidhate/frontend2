@@ -23,7 +23,7 @@ function UpdateInfo() {
         // console.log("in function===", id)
 
         try {
-            const response = await axios.get(`https://frontend2-3mm5.onrender.com/students/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setFrmData(response?.data?.data);
         }
         catch (error) {
@@ -34,7 +34,7 @@ function UpdateInfo() {
     const UpdateName = async (id) => {
         try {
 
-            const response = await axios.patch(`https://frontend2-3mm5.onrender.com/students/name/${id}`,
+            const response = await axios.patch(`${process.env.REACT_APP_API_URl}/students/name/${id}`,
                 {
                     name: frmData.name
                 }

@@ -18,7 +18,7 @@ function Adddetails() {
   const addInfo = async () => {
     try {
 
-      const response = await axios.post("http://localhost:5003/students", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URl}/students`, {
         id: frmdata.id,
         name: frmdata.name,
         mobile: frmdata.mobile,
@@ -114,7 +114,6 @@ function Adddetails() {
           }>
           Add
         </button>
-
 
       </div>
 

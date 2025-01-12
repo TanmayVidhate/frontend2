@@ -16,7 +16,7 @@ function Detail() {
         // console.log(id)
         toast.loading("Loading details of person...")
         try {
-            const response = await axios.get(`http://localhost:5003/students/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setData(response.data.data);
             toast.dismiss();
         }
