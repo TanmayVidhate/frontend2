@@ -19,10 +19,11 @@ function Detail() {
             const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setData(response.data.data);
             toast.dismiss();
+            toast.success("Data Loaded 😀")
         }
         catch (error) {
             toast.dismiss();
-            toast.error(error);
+            toast.error(error?.response?.data);
         }
     }
 
