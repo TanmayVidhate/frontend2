@@ -10,7 +10,7 @@ function Inputsfields({ type, name, placeholder, onChange,value, disabled}) {
                 name={name}
                 placeholder={placeholder}
                 onChange={onChange}
-                value={value || 'end'}
+                value={value ||''}
                 disabled={disabled}
                 required />
         </>
