@@ -21,7 +21,7 @@ function Cards({ id, name }) {
 
     return (
 
-        <div className='shadow-lg bg-gray-200 shadow-gray-800 p-4 max-w-100 m-5 rounded border-2 border-gray-600 border-solid hover:scale-[1.02] duration-300 hover:border-indigo-400 border-2 relative ' key={id}
+        <div className='shadow-lg bg-gray-200 shadow-gray-800 p-4 max-w-100 m-5 rounded border-2 border-gray-600 border-solid hover:scale-[1.02] duration-300 hover:border-indigo-400 border-2 relative xs:w-3/4 ' key={id}
             onClick={() => {
                 navigate(`/detail/${id}`);
             }}>
