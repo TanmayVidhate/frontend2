@@ -18,8 +18,9 @@ function Detail() {
         try {
             const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setData(response.data.data);
+
             toast.dismiss();
-            toast.success("Data Loaded 😀")
+            toast.success("Data Loading 😀")
         }
         catch (error) {
             toast.dismiss();
