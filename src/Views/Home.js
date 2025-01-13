@@ -35,7 +35,7 @@ function Home() {
         <>
             <h1 className='text-center text-3xl font-bold m-5'>Show Records</h1>
 
-            <div className=' w-3/4 h-96 m-auto p-1 overflow-y-scroll  sm:min-h-48'>
+            <div className=' w-3/4 h-96 m-auto p-1 overflow-y-scroll  xs:min-h-48'>
                 {
                     data?.map((info) => {
                         const { id, name } = info;

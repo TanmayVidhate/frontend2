@@ -64,7 +64,7 @@ function UpdateInfo() {
         <>
             <h1 className='text-center text-3xl font-bold m-5'>Update Info</h1>
 
-            <div className='w-2/5  border-2 border-solid border-gray-600 m-auto flex flex-col justify-items-center items-center rounded sm:w-3/4'>
+            <div className='w-2/5  border-2 border-solid border-gray-600 m-auto flex flex-col justify-items-center items-center rounded xs:w-3/4'>
 
                 <Inputsfields
                     type={'number'}
