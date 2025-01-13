@@ -19,13 +19,17 @@ function UpdateInfo() {
     })
 
     const ShowData = async (id) => {
+        toast.loading("Loading details of person...")
 
         try {
             const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setFrmData(response?.data?.data);
+            toast.dismiss();
+            toast.success("Data Loading 😀")
         }
         catch (error) {
-            toast.error(error)
+            toast.dismiss();
+            toast.error(error?.response?.data);
         }
     }
 
