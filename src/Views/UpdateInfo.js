@@ -20,8 +20,6 @@ function UpdateInfo() {
 
     const ShowData = async (id) => {
 
-        // console.log("in function===", id)
-
         try {
             const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setFrmData(response?.data?.data);

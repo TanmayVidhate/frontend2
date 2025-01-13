@@ -16,7 +16,7 @@ function Home() {
         toast.loading("Loading Data...")
         try {
 
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/students`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URl}/students`);
             setData(response.data.data);
 
             toast.dismiss();
