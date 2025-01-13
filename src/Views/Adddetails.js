@@ -53,7 +53,7 @@ function Adddetails() {
           type={'number'}
           name={'t1'}
           placeholder={'Enter Id'}
-          value={frmdata.id}
+          value={frmdata?.id}
           onChange={(e) => {
             setFrmdata(
               {
@@ -68,7 +68,7 @@ function Adddetails() {
           type={'text'}
           name={'t2'}
           placeholder={'Enter Name'}
-          value={frmdata.name}
+          value={frmdata?.name}
           onChange={(e) => {
             setFrmdata(
               {
@@ -83,7 +83,7 @@ function Adddetails() {
           type={'number'}
           name={'t3'}
           placeholder={'Enter Mobile No'}
-          value={frmdata.mobile}
+          value={frmdata?.mobile}
           onChange={(e) => {
             setFrmdata({
               ...frmdata,
@@ -96,7 +96,7 @@ function Adddetails() {
           type={'text'}
           name={'t4'}
           placeholder={'Enter BloodGroup'}
-          value={frmdata.bloodGroup}
+          value={frmdata?.bloodGroup}
           onChange={(e) => {
             setFrmdata({
               ...frmdata,
