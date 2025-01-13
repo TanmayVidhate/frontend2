@@ -20,6 +20,7 @@ function Home() {
             setData(response.data.data);
 
             toast.dismiss();
+            toast.success("Data Loaded 😀");
         }
 
         catch (error) {
