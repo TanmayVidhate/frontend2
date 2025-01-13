@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Inputsfields from '../Component/Inputsfields.js';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { Home as HomeIcon } from 'lucide-react';
 import axios from 'axios';
@@ -27,6 +27,8 @@ function Adddetails() {
 
       console.log(response);
 
+      toast.loading("Data is storing ✍...")
+
       toast.success("Data Add 👍");
 
       setFrmdata({
@@ -38,6 +40,7 @@ function Adddetails() {
 
     }
     catch (error) {
+      toast.dismiss();
       toast.error(error?.response?.data)
     }
   }
@@ -120,6 +123,8 @@ function Adddetails() {
       <Link to="/">
         <HomeIcon size={50} className='fixed right-10 bottom-10 hover:scale-125 duration-300' />
       </Link >
+
+      <Toaster/>
     </>
   )
 }

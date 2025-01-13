@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Inputsfields from '../Component/Inputsfields';
 import { Home as HomeIcon } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 
 
@@ -37,11 +37,17 @@ function UpdateInfo() {
                     name: frmData.name
                 }
             );
+            toast.loading("Getting Change ⌛...")
 
             setFrmData(response?.data?.data)
+
+            toast.dismiss()
+
+            toast.success("Name is updated. 👍")
         }
         catch (error) {
-            console.log(error.response.data.message);
+            toast.dismiss()
+            toast.error(error.response.data.message);
         }
     }
 
@@ -131,6 +137,8 @@ function UpdateInfo() {
             <Link to="/">
                 <HomeIcon size={50} className='fixed right-10 bottom-10 hover:scale-125 duration-300' />
             </Link >
+
+            <Toaster/>
         </>
     )
 }

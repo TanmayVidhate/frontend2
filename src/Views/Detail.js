@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import toast from 'react-hot-toast';
 import { useParams, Link } from 'react-router-dom'
+import toast, { Toaster } from 'react-hot-toast';
 import { Home as HomeIcon } from 'lucide-react'
 
 function Detail() {
@@ -10,7 +10,7 @@ function Detail() {
 
     useEffect(() => {
         LoadData(id);
-    },[id])
+    }, [id])
 
     const LoadData = async (id) => {
         // console.log(id)
@@ -18,9 +18,9 @@ function Detail() {
         try {
             const response = await axios.get(`${process.env.REACT_APP_API_URl}/students/${id}`);
             setData(response.data.data);
-
             toast.dismiss();
             toast.success("Data Loading 😀")
+
         }
         catch (error) {
             toast.dismiss();
@@ -42,6 +42,7 @@ function Detail() {
             <Link to="/">
                 <HomeIcon size={50} className='fixed right-10 bottom-10 hover:scale-125 duration-300' />
             </Link >
+            <Toaster/>
         </>
     )
 }
