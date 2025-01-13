@@ -37,7 +37,7 @@ function Adddetails() {
         mobile: "",
         bloodGroup: ""
       })
-
+      toast.dismiss();
     }
     catch (error) {
       toast.dismiss();
